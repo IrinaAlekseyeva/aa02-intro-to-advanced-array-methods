@@ -25,9 +25,13 @@ const friends = [
 ];
 
 
-const filteredFriends;
+const filteredFriends = friends.filter((person) => {
+  if((person.name.toLowerCase().substring(0,1) === "a") && (person.yearsOfFriendship > 5)){
+    return person;
+  }
+});
 
-// console.log(filteredFriends); // [ { name: "Agatha", yearsOfFriendship: 6 } ]
+ console.log(filteredFriends); // [ { name: "Agatha", yearsOfFriendship: 6 } ]
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

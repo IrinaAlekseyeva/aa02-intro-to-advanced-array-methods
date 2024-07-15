@@ -24,9 +24,25 @@ const friends = [
 ];
 
 // Hint: create an array of vowels to use in your solution.
-const threeVowelFriend;
+function threeVowelsInWord(friend){
+  let vowels = "aeiou";
+  count = 0;
 
-// console.log(threeVowelFriend); // [ { name: 'Angela', yearsOfFriendship: 2 } ]
+  for(let i = 0; i < friend.name.length; i++){
+    console.log(friend.name[i]);
+    if(vowels.includes(friend.name[i].toLowerCase())){
+      count++;
+    }
+    if(count >= 3){
+      return true;
+    } else {
+      continue;
+    }
+  }
+}
+const threeVowelFriend = friends.find(threeVowelsInWord);
+
+ console.log(threeVowelFriend); // [ { name: 'Angela', yearsOfFriendship: 2 } ]
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

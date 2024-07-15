@@ -24,9 +24,17 @@ const friends = [
   }
 ];
 
-const goodFriendsOrNot;
+const goodOrNot = numberOfYears => {
+  if(numberOfYears < 5){
+    return false;
+  } else {
+    return true;
+  }
+};
 
-// console.log(goodFriendsOrNot);          // [false, false, true, true]
+const goodFriendsOrNot = friends.map((obj) => goodOrNot(obj.yearsOfFriendship));
+
+ console.log(goodFriendsOrNot);          // [false, false, true, true]
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

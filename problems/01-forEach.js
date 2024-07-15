@@ -25,7 +25,7 @@ const friends = [
   }
 ];
 
-// Your code here 
+friends.forEach((obj) => console.log(obj.name + ": " + obj.yearsOfFriendship));
 
 /*
 Should print:
